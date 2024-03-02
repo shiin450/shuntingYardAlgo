@@ -5,11 +5,13 @@ public class shutingYardApp {
 
     public static void main(String[] args){
         
-      String testText= "(2+2)+(2*2)";
+      String testText= "(1+2)*(3-4)";
       List<Character> chars = Tokenizer.tokens(testText);
         System.out.println(chars);
-        Queue<Object> processed = PostFix.infinixProcess(chars);
-
+        Queue<Character> processed = new PostFix().infinixProcess(chars);
         System.out.println("Queue: " + processed);
+        postfixEvaluator calculated = new postfixEvaluator();
+        System.out.println(calculated.evaluator(processed));
+
     }
 }

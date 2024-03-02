@@ -6,10 +6,10 @@ import java.util.Stack;
 public class PostFix {
 
     List<Character> infinixForm;
-    static Stack<Object> stack = new Stack<>();
-    static Queue<Object> queue = new LinkedList<>();
+    private Stack<Character> stack = new Stack<>();
+    private Queue<Character> queue = new LinkedList<>();
 
-    public static Queue<Object> infinixProcess( List<Character> list) {
+    public  Queue<Character> infinixProcess( List<Character> list) {
 
         for (char c : list){
             if(Character.isDigit(c)){
