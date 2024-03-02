@@ -10,7 +10,9 @@ public class OperatorAssociativity {
         switch (op){
             case '^': return false;
             case '*':
+            case 'x':
             case '/':
+            case '÷':
             case '+' :
             case '-':
                return true;

@@ -12,7 +12,10 @@ public class PostFix {
     public  Queue<Character> infinixProcess( List<Character> list) {
 
         for (char c : list){
-            if(Character.isDigit(c)){
+            if (Character.isSpaceChar(c)){
+                continue;
+            }
+            else if(Character.isDigit(c)){
                 queue.add(c);
             }
             else if (isMathOperator(c) && stack.empty()) {
@@ -50,7 +53,7 @@ public class PostFix {
     }
 
     public static boolean isMathOperator(char c) {
-        return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
+        return c == '+' || c == '-' || c == '*' || c =='x'|| c == '/' || c == '÷'||c == '^';
     }
     public static boolean isLeftParentheses(char c) {
         return c == '(';
